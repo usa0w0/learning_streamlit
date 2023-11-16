@@ -55,3 +55,15 @@ Python用webアプリライブラリのStreamlitについての勉強と久し�
     git branch -u origin/ブランチ名
     ```
 
+## Streamlit
+- インストール
+  ```ターミナル
+  pip install streamlit
+  ```
+
+- インポート
+  ```app.py
+  import streamlit as st
+  ```
+
+- テキストやウィジェットの追加：[リファレンス](https://docs.streamlit.io/library/api-reference)を参照
