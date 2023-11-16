@@ -1,10 +1,8 @@
 import streamlit as st
+from streamlit_extras.stateful_chat import chat, add_message
+import pyperclip
 
-st.title("Streamlit勉強中") # タイトル
-st.header("見出し") # ヘッダー
-st.subheader('小見出し')
-st.write("hogehoge") # 表示
-
-st.markdown("# マークダウンでもかけるよ！（h1）") # マークダウンで表示
-st.markdown("## 正直MDが便利すぎるんじゃないか？（h1）")
-st.text("text") # テキスト表示
+with chat(key="my_chat"):
+    if prompt := st.chat_input():
+        pyperclip.copy(prompt)
+        add_message("user", prompt, avatar="🧑‍💻")
